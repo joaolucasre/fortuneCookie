@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    /*Com o font-size 62.5% no :root, as medidas em pixel passam para rem (px/10), exemplo: 1px = 0.1rem)*/
+}
+
+body{
+    background: linear-gradient(45deg, #190361, #bb00ff);    
+    animation: gradient 10s ease infinite;
+
+    background-size: 200% 200%;
+
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+main{
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    padding: 4.8rem 6.4rem 6.4rem;
+
+    width: min(42.8rem, 90%);
+
+    text-align: center;
+}
+
+body, button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    background: #FFFFFF;
+    border: none;
+
+    cursor: pointer;
+
+    transition: background .3s;
+}
+
+/*#Screen1*/
+.hide{
+    display: none;
+}
+
+h1{
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    padding: 0 2.0rem;
+}
+
+p{
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    margin-top: 1.4rem;
+}
+
+h1, p{
+    color: #34355B;
+}
+
+form{
+    margin-top: 2.6rem;
+}
+
+.trembling:hover {
+    animation: trembling 0.2s infinite;
+  }
+  
+  
+  .hide{
+    display: none;
+}
+
+/*Screen2*/
+.fortune{
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    
+    padding: 0;
+    margin-bottom: 1.7rem;
+}
+
+.fortune p{
+    font-family: Dancing Script;
+    font-size: 2.4rem;
+    color: black;
+
+    padding: 1.0rem;
+}
+
+/* Atualize a animação para um efeito de subida com aumento de tamanho */
+.fortune-animation {
+    animation: fortuneSlideIn 0.5s ease-out, fortuneScaleUp 0.5s ease-out;
+    animation-fill-mode: both;
+  }
+  
+@keyframes fortuneSlideIn {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+  
+@keyframes fortuneScaleUp {
+  0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
+}
+  
+.openedCookie{
+    padding: 4.3rem 0;
+}
+
+.screen2 button{
+    border-radius: 4px;
+    background: #FF9500;
+
+    color: white;
+    font-family: DM Sans;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    padding: 1.6rem;
+}
+
+@keyframes gradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes trembling {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2px, -2px); }
+    50% { transform: translate(2px, 2px); }
+    75% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0, 0); }
+}
